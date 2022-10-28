@@ -88,13 +88,31 @@ header .logo > a{
     font-size: 18px;
     text-transform: uppercase;  
     display: block;
+    position: relative;
 }
+
 
 #gnb > ul > li > a:hover{
-    background-color: var(--logo-color);
-    color: #fff;
+    color: var(--logo-color)
 }
 
+
+#gnb > ul > li a::after{
+    content:"";
+    position: absolute;
+    bottom: 10px;
+    width: 0;
+    left: 50%;
+    height: 4px; 
+    background-color: var(--logo-color); 
+    transition: all 0.5s;
+}
+
+
+#gnb > ul > li a:hover::after{
+    width: 80%;
+    left: 10%
+}
 
 
 #main .container{
